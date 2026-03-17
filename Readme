@@ -1,0 +1,83 @@
+# Professora Anna 👩‍🏫
+
+Assistente de programação via terminal que ajuda iniciantes a aprender Java e Python.
+
+## Sobre o Projeto
+
+Este projeto foi desenvolvido para praticar conceitos fundamentais de Java:
+
+- **Orientação a Objetos**: Classes com responsabilidades bem definidas
+- **Estruturas de Controle**: switch, while, if/else
+- **Manipulação de Strings**: Análise de código fonte
+- **Collections**: Uso de ArrayList
+- **Boas Práticas**: Código limpo, comentado e organizado
+
+## Funcionalidades
+
+| Comando   | Descrição                                    |
+|-----------|----------------------------------------------|
+| `revisar` | Analisa código Java ou Python e aponta erros |
+| `conceito`| Explica conceitos básicos com exemplos       |
+| `dica`    | Mostra uma dica aleatória de programação     |
+| `ajuda`   | Lista os comandos disponíveis                |
+| `sair`    | Encerra o programa                           |
+
+## Como Executar
+
+```bash
+# Compilar
+javac *.java
+
+# Executar
+java Professora
+```
+
+## Estrutura
+
+```
+├── Professora.java   # Classe principal (menu e fluxo)
+├── Analisador.java   # Lógica de análise de código
+├── Conceitos.java    # Explicações e dicas
+└── README.md
+```
+
+## Exemplo de Uso
+
+```
+========================================
+  Ola! Eu sou a Prof. Anna
+  Sua assistente de programacao!
+========================================
+
+Voce: revisar
+
+Prof. Anna: Qual linguagem?
+  1 - Java
+  2 - Python
+Opcao: 1
+
+Prof. Anna: Cole seu codigo. Digite 'FIM' para encerrar:
+public class Teste {
+    public static void main(String args) {
+        system.out.println("Ola")
+    }
+}
+FIM
+
+Prof. Anna: Resultado da analise:
+  - System.out.println esta escrito errado (Java diferencia maiusculas)
+  - Metodo main deve receber String[] args
+  - Linha 3: pode estar faltando ';'
+```
+
+## Tecnologias
+
+- Java 8+
+- Terminal/Console
+
+## Autor
+
+Bernardo - [GitHub](https://github.com/bernardop-d)
+
+--
+projeto desenvolvido para auxiliar as pessoas como eu que no começo possuiam muita dificuldade e nao queriam recorrer a IA que facilitaria ao maximo.
