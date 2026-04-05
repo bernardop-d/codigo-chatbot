@@ -2,59 +2,76 @@
 
 Assistente de programação via terminal que ajuda iniciantes a aprender Java e Python.
 
-## Sobre o Projeto
+## O que o projeto faz
 
-Este projeto foi desenvolvido para praticar conceitos fundamentais de Java:
+Você digita um comando no terminal e a Professora Anna responde:
 
-- **Orientação a Objetos**: Classes com responsabilidades bem definidas
-- **Estruturas de Controle**: switch, while, if/else
-- **Manipulação de Strings**: Análise de código fonte
-- **Collections**: Uso de ArrayList
-- **Boas Práticas**: Código limpo, comentado e organizado
+- `revisar` — você cola um código Java ou Python e ela aponta os erros mais comuns
+- `conceito` — ela explica um tema básico (variáveis, loops, condicionais, etc.) com exemplos
+- `dica` — mostra uma dica aleatória de boas práticas
+- `ajuda` — lista os comandos disponíveis
+- `sair` — encerra o programa
 
-## Funcionalidades
+## Tecnologias
 
-| Comando   | Descrição                                    |
-|-----------|----------------------------------------------|
-| `revisar` | Analisa código Java ou Python e aponta erros |
-| `conceito`| Explica conceitos básicos com exemplos       |
-| `dica`    | Mostra uma dica aleatória de programação     |
-| `ajuda`   | Lista os comandos disponíveis                |
-| `sair`    | Encerra o programa                           |
+- Java 8+
+- Terminal/Console (sem dependências externas)
 
-## Como Executar
+## Como rodar
+
+Você precisa ter o Java instalado. Para verificar:
 
 ```bash
-# Compilar
+java -version
+```
+
+Para compilar e executar:
+
+```bash
+# Compilar todos os arquivos
 javac *.java
 
 # Executar
 java Professora
 ```
 
-## Estrutura
+## Como rodar os testes
+
+Os testes usam JUnit 5. Baixe o jar em https://junit.org/junit5/ e execute:
+
+```bash
+# Compilar os testes (ajuste o caminho do jar)
+javac -cp .:junit-platform-console-standalone.jar AnalisadorTest.java
+
+# Executar os testes
+java -jar junit-platform-console-standalone.jar --class-path . --select-class AnalisadorTest
+```
+
+## Estrutura de pastas
 
 ```
-├── Professora.java   # Classe principal (menu e fluxo)
-├── Analisador.java   # Lógica de análise de código
-├── Conceitos.java    # Explicações e dicas
-└── README.md
+codigo-chatbot/
+├── Professora.java      # Classe principal — controla o menu e o fluxo do programa
+├── Analisador.java      # Analisa o código enviado e detecta erros comuns
+├── Conceitos.java       # Explica conceitos e mostra dicas de programação
+├── AnalisadorTest.java  # Testes unitários da classe Analisador
+└── Readme               # Este arquivo
 ```
 
-## Exemplo de Uso
+## Exemplo de uso
 
 ```
-========================================
-  Ola! Eu sou a Prof. Anna
-  Sua assistente de programacao!
-========================================
+==========================================
+ Ola! Eu sou a Prof. Anna
+ Sua assistente de programacao!
+==========================================
 
 Voce: revisar
 
 Prof. Anna: Qual linguagem?
-  1 - Java
-  2 - Python
-Opcao: 1
+ 1 - Java
+ 2 - Python
+Escolha: 1
 
 Prof. Anna: Cole seu codigo. Digite 'FIM' para encerrar:
 public class Teste {
@@ -65,19 +82,21 @@ public class Teste {
 FIM
 
 Prof. Anna: Resultado da analise:
-  - System.out.println esta escrito errado (Java diferencia maiusculas)
-  - Metodo main deve receber String[] args
-  - Linha 3: pode estar faltando ';'
+ - System.out.println esta escrito errado (Java diferencia maiusculas)
+ - Metodo main deve receber String[] args
+ - Linha 3: pode estar faltando ';'
 ```
 
-## Tecnologias
+## O que aprendi
 
-- Java 8+
-- Terminal/Console
+- Como organizar um projeto Java em múltiplas classes com responsabilidades separadas
+- Uso de `switch` para controlar um menu interativo no terminal
+- Manipulação de `String` com `contains()`, `startsWith()`, `split()` e `StringBuilder`
+- Como escrever testes unitários com JUnit 5 para validar lógica sem precisar rodar o programa inteiro
 
 ## Autor
 
-Bernardo - [GitHub](https://github.com/bernardop-d)
+Bernardo — [github.com/bernardop-d](https://github.com/bernardop-d)
 
---
-Este projeto foi criado para apoiar iniciantes que, assim como eu no começo, enfrentavam dificuldades na programação e buscavam evoluir com autonomia, utilizando a tecnologia como apoio e não como substituta do aprendizado.
+---
+Este projeto foi criado para praticar Java e ajudar iniciantes que, assim como eu no começo, tinham dificuldades com erros básicos de sintaxe.
